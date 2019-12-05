@@ -13,19 +13,19 @@ function Calcu(){
 
         switch(ss){
             case '+':
-                rr = aa+bb;
+                r[i].value = rr = aa+bb;
                 Check(rr , i);
                 break;
             case '−':
-                rr = aa-bb;
+                r[i].value = rr = aa-bb;
                 Check(rr , i);
                 break;
             case '×':
-                rr = aa*bb;
+                r[i].value = rr = aa*bb;
                 Check(rr , i);
                 break;
             case '÷':
-                rr = aa/bb;
+                r[i].value = rr = aa/bb;
                 Check(rr , i);
                 break;
             }
