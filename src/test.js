@@ -1,46 +1,42 @@
+function Calcu(){
 
-function Calcu(a,b,c){
+    let a = document.getElementsByClassName("first");
+    let b = document.getElementsByClassName("second");
+    let s = document.getElementsByClassName("symbol");
+    let r = document.getElementsByClassName("result");
 
-    for (let i = 0; i < 4; i++) {
-        a = parseFloat(document.getElementsByClassName("first")[i].value);
-        b = parseFloat(document.getElementsByClassName("second")[i].value); 
-        c = document.getElementsByClassName("symbol")[i].innerHTML;
-    
-        if(c === '+'){
-            const check = document.getElementsByClassName("result")[i].value = a+b;
-            if(check > 100){
-                document.getElementsByClassName("check")[i].innerHTML = 'OK';
-            }else{
-                document.getElementsByClassName("check")[i].innerHTML = 'NG';
-                document.getElementsByClassName("check")[i].style.backgroundColor = "red";
+    for (let i = 0; i < a.length; i++) {
+        let aa = parseFloat(a[i].value);
+        let bb = parseFloat(b[i].value); 
+        let ss = s[i].innerHTML;
+        let rr = r[i].value;
+
+        switch(ss){
+            case '+':
+                rr = aa+bb;
+                Check(rr , i);
+                break;
+            case '−':
+                rr = aa-bb;
+                Check(rr , i);
+                break;
+            case '×':
+                rr = aa*bb;
+                Check(rr , i);
+                break;
+            case '÷':
+                rr = aa/bb;
+                Check(rr , i);
+                break;
             }
         }
-        if(c === '−'){
-            const check = document.getElementsByClassName("result")[i].value = a-b;
-            if(check > 100){
-                document.getElementsByClassName("check")[i].innerHTML = 'OK';
-            }else{
-                document.getElementsByClassName("check")[i].innerHTML = 'NG';
-                document.getElementsByClassName("check")[i].style.backgroundColor = "red";
-            }
-        }
-        if(c === '×'){
-            const check = document.getElementsByClassName("result")[i].value = a*b;
-            if(check > 100){
-                document.getElementsByClassName("check")[i].innerHTML = 'OK';
-            }else{
-                document.getElementsByClassName("check")[i].innerHTML = 'NG';
-                document.getElementsByClassName("check")[i].style.backgroundColor = "red";
-            }
-        }
-        if(c === '÷'){
-            const check = document.getElementsByClassName("result")[i].value = a/b;
-            if(check > 100){
-                document.getElementsByClassName("check")[i].innerHTML = 'OK';
-            }else{
-                document.getElementsByClassName("check")[i].innerHTML = 'NG';
-                document.getElementsByClassName("check")[i].style.backgroundColor = "red";
-            }
-        }
+    }
+
+function Check(rr , i){
+    if(rr > 100){
+        document.getElementsByClassName("check")[i].innerHTML = 'OK';
+    }else{
+        document.getElementsByClassName("check")[i].innerHTML = 'NG';
+        document.getElementsByClassName("check")[i].style.backgroundColor = "red";
     }
 }
