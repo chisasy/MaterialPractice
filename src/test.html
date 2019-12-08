@@ -1,16 +1,42 @@
 <html>
     <head>
+        <style>
+                .viewnone {
+                    display: none;
+                  }
+        </style>
     </head>
-
-<button onclick=Calcu()>計算</button>
-<br/>
-<input class="first" type="text"></input><b class="symbol">+</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
-<br/>
-<input class="first" type="text"></input><b class="symbol">−</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
-<br/>
-<input class="first" type="text"></input><b class="symbol">×</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
-<br/>
-<input class="first" type="text"></input><b class="symbol">÷</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
+    <body>
+        <div>カテゴリ</div>
+        <div>▶表示したい機能を選んでください</div>
+            <div onchange=Select()>
+                <select id="target">
+                   <option>計算</option>
+                   <option>未定</option>
+                   <option>未定</option>
+                   <option>未定</option>
+                </select>
+                
+                <div Id="display">
+                    <br/>
+                    <div>計算したい値を入力し、「計算する」ボタンを押してください</div>
+                    <div>〜計算結果が100以上でOKです〜</div>
+        
+                    <input class="first" type="text"></input><b class="symbol">+</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
+                    <br/>
+                    <input class="first" type="text"></input><b class="symbol">−</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
+                    <br/>
+                    <input class="first" type="text"></input><b class="symbol">×</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
+                    <br/>
+                    <input class="first" type="text"></input><b class="symbol">÷</b><input class="second" type="text"></input> = <input class="result" type="text"></input><b class="check"></b>
+                    <br/>
+                    <button onclick=Calcu()>計算する</button>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
 <script type="text/JavaScript" src="test.js"></script>
+
 

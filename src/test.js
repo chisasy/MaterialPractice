@@ -34,9 +34,19 @@ function Calcu(){
 
 function Check(rr , i){
     if(rr > 100){
-        document.getElementsByClassName("check")[i].innerHTML = 'OK';
+        document.getElementsByClassName('check')[i].innerHTML = 'OK';
+        document.getElementsByClassName('check')[i].style.backgroundColor = '';
     }else{
-        document.getElementsByClassName("check")[i].innerHTML = 'NG';
-        document.getElementsByClassName("check")[i].style.backgroundColor = "red";
+        document.getElementsByClassName('check')[i].innerHTML = 'NG';
+        document.getElementsByClassName('check')[i].style.backgroundColor = 'red';
+    }
+}
+
+function Select(){
+    let dispEl = document.querySelector('#display');
+    if ('計算' === document.querySelector('#target').value) {
+      dispEl.classList.remove('viewnone');
+    } else {
+      dispEl.classList.add('viewnone');
     }
 }
